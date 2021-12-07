@@ -1,0 +1,5 @@
+resipy
+pyvista
+numpy
+pandas
+matplotlib 
