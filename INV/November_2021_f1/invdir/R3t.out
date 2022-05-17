@@ -1,0 +1,34 @@
+
+
+ >> R 3 t     E R T    M o d e l    v 2.31 <<
+
+ >> Date: 17-05-2022
+ >> Salorno_site2                                                                   
+ >> A d v a n c e d   M e s h   I n p u t <<
+ >> T e t r a h e d r a l   E l e m e n t   M e s h <<
+
+
+ >> Parameterisation
+    Total number of parameters:                 227273
+    Number of elements with fixed resistivity:       0
+    Number of parameter regularisation zones:        1
+    Regularisation zone   1   alpha scalar:        1.0
+ >> Reading resistivity model from res0.dat                                                                        
+
+ >> L o g - D a t a   I n v e r s i o n <<
+ >> N o r m a l   R e g u l a r i s a t i o n <<
+    For   1000 measurements the memory needed is:          1.894 Gb
+    For   2000 measurements the memory needed is:          3.713 Gb
+    For   5000 measurements the memory needed is:          9.167 Gb
+    For  10000 measurements the memory needed is:         18.259 Gb
+
+
+ >> Number of measurements read: 5169
+
+ >> Total Memory required is:          9.475 Gb
+
+
+ Processing frame   1 - output to file f001.dat
+
+   Iteration   1
+     Initial RMS Misfit:         6.72      Number of data ignored:   384

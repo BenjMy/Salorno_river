@@ -1,0 +1,114 @@
+
+
+ >> R 3 t     E R T    M o d e l    v 2.31 <<
+
+ >> Date: 17-05-2022
+ >> Salorno_site2                                                                   
+ >> A d v a n c e d   M e s h   I n p u t <<
+ >> T e t r a h e d r a l   E l e m e n t   M e s h <<
+
+
+ >> Parameterisation
+    Total number of parameters:                  37419
+    Number of elements with fixed resistivity:       0
+    Number of parameter regularisation zones:        1
+    Regularisation zone   1   alpha scalar:        1.0
+ >> Reading resistivity model from res0.dat                                                                        
+
+ >> L o g - D a t a   I n v e r s i o n <<
+ >> N o r m a l   R e g u l a r i s a t i o n <<
+    For   1000 measurements the memory needed is:          0.313 Gb
+    For   2000 measurements the memory needed is:          0.612 Gb
+    For   5000 measurements the memory needed is:          1.511 Gb
+    For  10000 measurements the memory needed is:          3.008 Gb
+
+
+ >> Number of measurements read: 4811
+
+ >> Total Memory required is:          1.454 Gb
+
+
+ Processing frame   1 - output to file f001.dat
+
+   Iteration   1
+     Initial RMS Misfit:         6.35      Number of data ignored:   399
+     Alpha:     1286969.001   RMS Misfit:        6.09  Roughness:        0.000
+     Alpha:      597358.095   RMS Misfit:        6.08  Roughness:        0.000
+     Alpha:      277269.066   RMS Misfit:        6.07  Roughness:        0.002
+     Alpha:      128696.900   RMS Misfit:        6.06  Roughness:        0.005
+     Alpha:       59735.809   RMS Misfit:        6.03  Roughness:        0.020
+     Alpha:       27726.907   RMS Misfit:        5.98  Roughness:        0.071
+     Alpha:       12869.690   RMS Misfit:        5.88  Roughness:        0.273
+     Alpha:        5973.581   RMS Misfit:        5.72  Roughness:        0.975
+     Alpha:        2772.691   RMS Misfit:        5.47  Roughness:        3.263
+     Alpha:        1286.969   RMS Misfit:        5.11  Roughness:        9.608
+     Step length set to      1.000
+     Final RMS Misfit:        5.11
+     Data misfit:        114860.45
+     Model misfit:        12364.88
+     Total misfit:       127225.33
+     Updated data weights
+
+   Iteration   2
+     Initial RMS Misfit:         3.64      Number of data ignored:   369
+     Alpha:         932.568   RMS Misfit:        3.43  Roughness:       11.574
+     Alpha:         432.860   RMS Misfit:        3.10  Roughness:       26.661
+     Alpha:         200.916   RMS Misfit:        2.86  Roughness:       45.816
+     Alpha:          93.257   RMS Misfit:        2.57  Roughness:       84.503
+     Alpha:          43.286   RMS Misfit:        2.35  Roughness:      139.303
+     Alpha:          20.092   RMS Misfit:        2.23  Roughness:      219.526
+     Alpha:           9.326   RMS Misfit:        2.19  Roughness:      334.193
+     Alpha:           4.329   RMS Misfit:        2.41  Roughness:      518.820
+     Step length set to      1.000
+     Final RMS Misfit:        2.19
+     Data misfit:         21200.43
+     Model misfit:         3116.57
+     Total misfit:        24317.00
+     Updated data weights
+
+   Iteration   3
+     Initial RMS Misfit:         1.86      Number of data ignored:   324
+     Alpha:           5.576   RMS Misfit:        1.33  Roughness:      437.792
+     Alpha:           2.588   RMS Misfit:        1.25  Roughness:      613.654
+     Alpha:           1.201   RMS Misfit:        1.28  Roughness:      876.214
+     Step length set to      1.000
+     Final RMS Misfit:        1.25
+     Data misfit:          6996.95
+     Model misfit:         1588.31
+     Total misfit:         8585.26
+     Attempted to update data weights and caused overshoot
+     treating as converged
+
+ Solution converged - Outputing results to file
+
+ Calculating sensitivity map
+
+ End of data:  Terminating
+
+
+    Timing Summary
+    ==============
+    Total time taken:                              4399. s
+
+    Percent time taken forming element equations:    0.0 %
+    Percent time taken solving forward  equations:   0.6 %
+    Percent time taken forming Jacobian:             0.7 %
+    Percent time taken solving inverse equations:   98.7 %
+    Percent time taken calculating res. matrix:      0.0 %
+
+    Timing Details
+    ==============
+    Number of calls to form element equations:        22
+    Average time taken in call:                      0.0 s
+    Number of calls to solve forward equations:     2640
+    Average time taken in call:                      0.0 s
+    Number of calls to form Jacobian:                  3
+    Average time taken in call:                     10.5 s
+    Number of calls to solve inverse equations:       21
+    Average time taken in call:                    206.7 s
+    Number of calls to calculate res. matrix:          0
+    Average time taken in call:                      0.0 s
+
+
+ >> Program ended normally
+
