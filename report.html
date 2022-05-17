@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Salerno_field2</title>
+    <title>3D ERT Time-Lapse on a River Bank (Salerno2) &#8212; Salerno_field2</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,6 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Individual inversion" href="individual-inversion.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -66,8 +67,77 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-2 bd-sidebar site-navigation show single-page" id="site-navigation">
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Salerno_field2</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p class="caption" role="heading">
+ <span class="caption-text">
+  Part 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="individual-inversion.html">
+   Individual inversion
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Part 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="time-lapse-seasonal.html">
+   Time Lapse seasonal
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Part 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="time-lapse-tracer.html">
+   Time Lapse tracer inversion
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Part 4
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data-repository.html">
+   Data Repository
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Written in <a href="https://curvenote.com">Curvenote</a>
+</div>
+
 </div>
 
 
@@ -82,7 +152,33 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
         <div class="col pl-md-4 topbar-main">
             
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
             
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/report.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
             <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
@@ -97,7 +193,9 @@ const thebe_selector_output = ".output, .cell_output"
             href="https://curvenote.com/@benjm/salerno-field2/issues/new?title=Issue%20on%20page%20%2Freport.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
+        <a class="edit-button" href="https://github.com/@benjm/salerno-field2/edit/master/report.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
 </div>
 
@@ -119,81 +217,40 @@ const thebe_selector_output = ".output, .cell_output"
                 <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
-                <p class="caption" role="heading">
- <span class="caption-text">
-  Part 1
- </span>
-</p>
-<ul class="visible nav section-nav flex-column">
- <li class="toctree-l1 toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="report.html#document-individual-inversion">
-   Individual inversion
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   3D ERT Time-Lapse on a River Bank (Salerno2)
   </a>
  </li>
- <li class="toctree-l1 toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="report.html#april-4-2022-time-0">
-   April 4, 2022, Time 0
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-acquisition">
+   Data acquisition
   </a>
  </li>
-</ul>
-<p class="caption" role="heading">
- <span class="caption-text">
-  Part 2
- </span>
-</p>
-<ul class="nav section-nav flex-column">
- <li class="toctree-l1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="report.html#document-time-lapse-seasonal">
-   Time Lapse seasonal
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-processing">
+   Data processing
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mesh">
+     Mesh
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inversion">
+     Inversion
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toctree-l1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="report.html#notebook-to-reproduce">
-   Notebook to reproduce
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preliminary-results-november-22-2021-coarse-mesh">
+   Preliminary Results (November 22, 2021) - coarse mesh
   </a>
- </li>
- <li class="toctree-l1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="report.html#id1">
-  </a>
- </li>
-</ul>
-<p class="caption" role="heading">
- <span class="caption-text">
-  Part 3
- </span>
-</p>
-<ul class="nav section-nav flex-column">
- <li class="toctree-l1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="report.html#document-time-lapse-tracer">
-   Time Lapse tracer inversion
-  </a>
- </li>
- <li class="toctree-l1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="report.html#notebooks-to-reproduce">
-   Notebooks to reproduce
-  </a>
- </li>
- <li class="toctree-l1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="report.html#background-inversion">
-   Background inversion
-  </a>
- </li>
- <li class="toctree-l1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="report.html#difference-inversion">
-   Difference inversion
-  </a>
- </li>
-</ul>
-<p class="caption" role="heading">
- <span class="caption-text">
-  Part 4
- </span>
-</p>
-<ul class="nav section-nav flex-column">
- <li class="toctree-l1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="report.html#document-data-repository">
-   Data Repository
-  </a>
+  <ul class="visible nav section-nav flex-column">
+  </ul>
  </li>
 </ul>
 
@@ -255,8 +312,8 @@ filterData: 2 / 19221 quadrupoles removed.
 <h2>Inversion<a class="headerlink" href="#inversion" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="results">
-<h1>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h1>
+<div class="tex2jax_ignore mathjax_ignore section" id="preliminary-results-november-22-2021-coarse-mesh">
+<h1>Preliminary Results (November 22, 2021) - coarse mesh<a class="headerlink" href="#preliminary-results-november-22-2021-coarse-mesh" title="Permalink to this headline">¶</a></h1>
 <p>For interactive vtk visualization see output folder.</p>
 <div class="figure align-default" id="id2">
 <img alt="_images/wjcU0xFUCQKRwMTRhf0q-WE3xCmoyMjOZmbh3mmHB-v1.png" src="_images/wjcU0xFUCQKRwMTRhf0q-WE3xCmoyMjOZmbh3mmHB-v1.png" />
@@ -266,81 +323,14 @@ filterData: 2 / 19221 quadrupoles removed.
 </div>
 <p>Notebook to reproduce the data: <span class="xref myst">Salanto_2</span></p>
 <div class="toctree-wrapper compound">
-<span id="document-individual-inversion"></span><div class="tex2jax_ignore mathjax_ignore section" id="individual-inversion">
-<h2>Individual inversion<a class="headerlink" href="#individual-inversion" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="april-4-2022-time-0">
-<h2>April 4, 2022, Time 0<a class="headerlink" href="#april-4-2022-time-0" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default" id="svk2c2niyu">
-<img alt="_images/wjcU0xFUCQKRwMTRhf0q-TcqgM9K3ytlrPNjTT9Ma-v3.png" src="_images/wjcU0xFUCQKRwMTRhf0q-TcqgM9K3ytlrPNjTT9Ma-v3.png" />
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">From left to right and top to bottom: T2 (background, April 4, 2022) to T6, inverted individually with 10% of error (filtered via recoprocals analysis)</span><a class="headerlink" href="#svk2c2niyu" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="rci26de6og">
-<img alt="_images/wjcU0xFUCQKRwMTRhf0q-n2e5iS9dxjrKX1QEBZHa-v4.png" src="_images/wjcU0xFUCQKRwMTRhf0q-n2e5iS9dxjrKX1QEBZHa-v4.png" />
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Top to bottom: T2 (background, April 4, 2022) to T6, inverted individually with 10% of error (filtered via recoprocals analysis)</span><a class="headerlink" href="#rci26de6og" title="Permalink to this image">¶</a></p>
-</div>
-</div>
 </div>
 <div class="toctree-wrapper compound">
-<span id="document-time-lapse-seasonal"></span><div class="tex2jax_ignore mathjax_ignore section" id="time-lapse-seasonal">
-<h2>Time Lapse seasonal<a class="headerlink" href="#time-lapse-seasonal" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="notebook-to-reproduce">
-<h2>Notebook to reproduce<a class="headerlink" href="#notebook-to-reproduce" title="Permalink to this headline">¶</a></h2>
-<p><span class="xref myst">Salorno_2_TL12</span></p>
-<div class="section" id="background-inversion">
-<h3>Background inversion<a class="headerlink" href="#background-inversion" title="Permalink to this headline">¶</a></h3>
-<p>Time lapse inversion between file120data2.dat (April 4, 2022) with file120data1.dat (November 22, 2021) i.e. two natural conditions in different seasons.</p>
-<div class="figure align-default" id="ngbaaoitoi">
-<img alt="_images/wjcU0xFUCQKRwMTRhf0q-EPosl0n53ngltp1AEi4Z-v4.png" src="_images/wjcU0xFUCQKRwMTRhf0q-EPosl0n53ngltp1AEi4Z-v4.png" />
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">From left to right: Background Time lapse inversion between file120data2.dat (April 4, 2022) with file120data1.dat (November 22, 2021) i.e. two natural conditions in different seasons and differences (in %).</span><a class="headerlink" href="#ngbaaoitoi" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="h7wumtnbvk">
-<img alt="_images/wjcU0xFUCQKRwMTRhf0q-xGyu1B2bb70ZrknJ4W43-v5.png" src="_images/wjcU0xFUCQKRwMTRhf0q-xGyu1B2bb70ZrknJ4W43-v5.png" />
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Time Time lapse inversion differences (in %) between file120data2.dat (April 4, 2022) with file120data1.dat (November 22, 2021) i.e. two natural conditions in different seasons.</span><a class="headerlink" href="#h7wumtnbvk" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="yy7uikjubr">
-<img alt="_images/wjcU0xFUCQKRwMTRhf0q-CF3JfxwmUKFyZCRx5QA7-v4.png" src="_images/wjcU0xFUCQKRwMTRhf0q-CF3JfxwmUKFyZCRx5QA7-v4.png" />
-<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Isovolumes of differences (%) computed from time lapse inversion between file120data2.dat (April 4, 2022) with file120data1.dat (November 22, 2021) i.e. two natural conditions in different seasons.</span><a class="headerlink" href="#yy7uikjubr" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="id1">
-<h2><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-</div>
 </div>
 <div class="toctree-wrapper compound">
-<span id="document-time-lapse-tracer"></span><div class="tex2jax_ignore mathjax_ignore section" id="time-lapse-tracer-inversion">
-<h2>Time Lapse tracer inversion<a class="headerlink" href="#time-lapse-tracer-inversion" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="notebooks-to-reproduce">
-<h2>Notebooks to reproduce<a class="headerlink" href="#notebooks-to-reproduce" title="Permalink to this headline">¶</a></h2>
-<p><span class="xref myst">Salorno_2_TL2b3456_reg1</span> <span class="xref myst">Salorno_2_TL2b3456_reg2</span></p>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="background-inversion">
-<h2>Background inversion<a class="headerlink" href="#background-inversion" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default" id="t2a3qhc91i">
-<img alt="_images/wjcU0xFUCQKRwMTRhf0q-icGg93yCPEwIyreEPd45-v4.png" src="_images/wjcU0xFUCQKRwMTRhf0q-icGg93yCPEwIyreEPd45-v4.png" />
-<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Time lapse inversion differences (in %) between two consecutive times from T2 (file120data2.dat April 4, 2022) to T6. Differences range from 0 to 10%.</span><a class="headerlink" href="#t2a3qhc91i" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="ar4o6y9unp">
-<img alt="_images/wjcU0xFUCQKRwMTRhf0q-ZJZo0yNlaLDDB59r9Y3O-v4.png" src="_images/wjcU0xFUCQKRwMTRhf0q-ZJZo0yNlaLDDB59r9Y3O-v4.png" />
-<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Isovolumes of differences (%) computed from time lapse inversion between T2 (file120data2.dat April 4, 2022) and T3, T4, T5, T6.</span><a class="headerlink" href="#ar4o6y9unp" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="difference-inversion">
-<h2>Difference inversion<a class="headerlink" href="#difference-inversion" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default" id="wcoz7m1rnp">
-<img alt="_images/wjcU0xFUCQKRwMTRhf0q-icGg93yCPEwIyreEPd45-v5.png" src="_images/wjcU0xFUCQKRwMTRhf0q-icGg93yCPEwIyreEPd45-v5.png" />
-<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Time lapse inversion differences (in %) between two consecutive times from T2 (file120data2.dat April 4, 2022) to T6. Differences range from 0 to 10%.</span><a class="headerlink" href="#wcoz7m1rnp" title="Permalink to this image">¶</a></p>
-</div>
-</div>
 </div>
 <div class="toctree-wrapper compound">
-<span id="document-data-repository"></span><div class="tex2jax_ignore mathjax_ignore section" id="data-repository">
-<h2>Data Repository<a class="headerlink" href="#data-repository" title="Permalink to this headline">¶</a></h2>
-<p>Data are available on [github](<a class="reference external" href="https://github.com/BenjMy/Salorno_river">https://github.com/BenjMy/Salorno_river</a>)</p>
 </div>
+<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -373,6 +363,15 @@ filterData: 2 / 19221 quadrupoles removed.
 
 <div class='prev-next-bottom'>
     
+     <div id="next">
+        <a class="right-next" href="individual-inversion.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Individual inversion</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         

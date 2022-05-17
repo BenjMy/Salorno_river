@@ -225,8 +225,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notebooks-to-reproduce">
-   Notebooks to reproduce
+  <a class="reference internal nav-link" href="#difference-inversion">
+   Difference inversion
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -235,8 +235,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#difference-inversion">
-   Difference inversion
+  <a class="reference internal nav-link" href="#notebooks-to-reproduce">
+   Notebooks to reproduce
   </a>
  </li>
 </ul>
@@ -252,16 +252,36 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="time-lapse-tracer-inversion">
 <h1>Time Lapse tracer inversion<a class="headerlink" href="#time-lapse-tracer-inversion" title="Permalink to this headline">¶</a></h1>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Here I’m not sure to understand why the differences between background inversion and differences injection for the 1st times (T2/T3) are such different. The max differences for the background is about 450% (!!) while 10% for the difference inversion.</p>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="difference-inversion">
+<h1>Difference inversion<a class="headerlink" href="#difference-inversion" title="Permalink to this headline">¶</a></h1>
+<p>a(T2/T3) | b (T3/T4)</p>
+<p>c (T4/T5)| d (T5/T6)</p>
+<div class="figure align-default" id="wcoz7m1rnp">
+<img alt="_images/wjcU0xFUCQKRwMTRhf0q-icGg93yCPEwIyreEPd45-v5.png" src="_images/wjcU0xFUCQKRwMTRhf0q-icGg93yCPEwIyreEPd45-v5.png" />
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Time lapse inversion differences (in %) between two consecutive times from T2 (file120data2.dat April 4, 2022) to T6. Differences range from 0 to 10%.</span><a class="headerlink" href="#wcoz7m1rnp" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="background-inversion">
+<h1>Background inversion<a class="headerlink" href="#background-inversion" title="Permalink to this headline">¶</a></h1>
+<p>a(T2/T3) | b (T2/T4)</p>
+<p>c (T2/T5)| d (T2/T6)</p>
+<div class="figure align-default" id="t2a3qhc91i">
+<img alt="_images/wjcU0xFUCQKRwMTRhf0q-icGg93yCPEwIyreEPd45-v4.png" src="_images/wjcU0xFUCQKRwMTRhf0q-icGg93yCPEwIyreEPd45-v4.png" />
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Time lapse inversion differences (in %) between two consecutive times from T2 (file120data2.dat April 4, 2022) to T6. Differences range from 0 to 10%.</span><a class="headerlink" href="#t2a3qhc91i" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="ar4o6y9unp">
+<img alt="_images/wjcU0xFUCQKRwMTRhf0q-ZJZo0yNlaLDDB59r9Y3O-v4.png" src="_images/wjcU0xFUCQKRwMTRhf0q-ZJZo0yNlaLDDB59r9Y3O-v4.png" />
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Isovolumes of differences (%) computed from time lapse inversion between T2 (file120data2.dat April 4, 2022) and T3, T4, T5, T6.</span><a class="headerlink" href="#ar4o6y9unp" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="notebooks-to-reproduce">
 <h1>Notebooks to reproduce<a class="headerlink" href="#notebooks-to-reproduce" title="Permalink to this headline">¶</a></h1>
 <p><span class="xref myst">Salorno_2_TL2b3456_reg1</span> <span class="xref myst">Salorno_2_TL2b3456_reg2</span></p>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="background-inversion">
-<h1>Background inversion<a class="headerlink" href="#background-inversion" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="difference-inversion">
-<h1>Difference inversion<a class="headerlink" href="#difference-inversion" title="Permalink to this headline">¶</a></h1>
 </div>
 
     <script type="text/x-thebe-config">
