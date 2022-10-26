@@ -1,0 +1,98 @@
+
+
+ >> R 3 t     E R T    M o d e l    v 2.31 <<
+
+ >> Date: 01-07-2022
+ >> Laghetti                                                                        
+ >> A d v a n c e d   M e s h   I n p u t <<
+ >> T e t r a h e d r a l   E l e m e n t   M e s h <<
+
+
+ >> Parameterisation
+    Total number of parameters:                  53740
+    Number of elements with fixed resistivity:       0
+    Number of parameter regularisation zones:        1
+    Regularisation zone   1   alpha scalar:        1.0
+ >> Reading resistivity model from res0.dat                                                                        
+
+ >> L o g - D a t a   I n v e r s i o n <<
+ >> N o r m a l   R e g u l a r i s a t i o n <<
+    For   1000 measurements the memory needed is:          0.449 Gb
+    For   2000 measurements the memory needed is:          0.879 Gb
+    For   5000 measurements the memory needed is:          2.169 Gb
+    For  10000 measurements the memory needed is:          4.319 Gb
+
+
+ >> Number of measurements read: 4344
+
+ >> Total Memory required is:          1.887 Gb
+
+
+ Processing frame   1 - output to file f001.dat
+
+   Iteration   1
+     Initial RMS Misfit:         6.45      Number of data ignored:   259
+     Alpha:        8138.692   RMS Misfit:        5.83  Roughness:        0.933
+     Alpha:        3777.646   RMS Misfit:        5.79  Roughness:        1.157
+     Alpha:        1753.428   RMS Misfit:        5.41  Roughness:        6.139
+     Alpha:         813.869   RMS Misfit:        5.08  Roughness:       14.540
+     Alpha:         377.765   RMS Misfit:        4.63  Roughness:       36.984
+     Alpha:         175.343   RMS Misfit:        4.24  Roughness:       73.963
+     Alpha:          81.387   RMS Misfit:        3.96  Roughness:      135.387
+     Alpha:          37.776   RMS Misfit:        3.79  Roughness:      230.086
+     Alpha:          17.534   RMS Misfit:        3.80  Roughness:      383.464
+     Step length set to      1.000
+     Final RMS Misfit:        3.79
+     Data misfit:         57672.93
+     Model misfit:         8691.85
+     Total misfit:        66364.78
+     Updated data weights
+
+   Iteration   2
+     Initial RMS Misfit:         2.23      Number of data ignored:   249
+     Alpha:          23.734   RMS Misfit:        1.82  Roughness:      221.321
+     Alpha:          11.017   RMS Misfit:        1.66  Roughness:      328.622
+     Alpha:           5.113   RMS Misfit:        1.60  Roughness:      403.966
+     Alpha:           2.373   RMS Misfit:        1.54  Roughness:      596.767
+     Alpha:           1.102   RMS Misfit:        1.58  Roughness:      880.448
+     Step length set to      1.000
+     Final RMS Misfit:        1.54
+     Data misfit:          9658.28
+     Model misfit:         1416.39
+     Total misfit:        11074.67
+     Attempted to update data weights and caused overshoot
+     treating as converged
+
+ Solution converged - Outputing results to file
+
+ Calculating sensitivity map
+
+ End of data:  Terminating
+
+
+    Timing Summary
+    ==============
+    Total time taken:                              3158. s
+
+    Percent time taken forming element equations:    0.0 %
+    Percent time taken solving forward  equations:   0.9 %
+    Percent time taken forming Jacobian:             1.4 %
+    Percent time taken solving inverse equations:   97.6 %
+    Percent time taken calculating res. matrix:      0.0 %
+
+    Timing Details
+    ==============
+    Number of calls to form element equations:        15
+    Average time taken in call:                      0.0 s
+    Number of calls to solve forward equations:     1800
+    Average time taken in call:                      0.0 s
+    Number of calls to form Jacobian:                  2
+    Average time taken in call:                     21.8 s
+    Number of calls to solve inverse equations:       14
+    Average time taken in call:                    220.1 s
+    Number of calls to calculate res. matrix:          0
+    Average time taken in call:                      0.0 s
+
+
+ >> Program ended normally
+

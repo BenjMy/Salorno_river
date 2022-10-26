@@ -1,0 +1,25 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: report
+parts:
+  - caption: Part 1
+    chapters:
+      - file: individual-inversion
+  - caption: Part 2
+    chapters:
+      - file: time-lapse-seasonal
+  - caption: Part 3
+    chapters:
+      - file: time-lapse-tracer
+  - caption: Part 4
+    chapters:
+      - file: data-repository
+  - caption: Notebooks
+    chapters:
+      - file: salorno-2-tl12
+      - file: salorno-2-tl2b3456-reg1
+      - file: salorno-2-tl2b3456-reg2
+      - file: importandplot
+

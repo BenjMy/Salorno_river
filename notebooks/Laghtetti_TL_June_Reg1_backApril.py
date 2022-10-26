@@ -1,0 +1,229 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# # Notebook for the Alento (site nb2) data processing
+# 
+# - 🔨 Data acquisition: G. Cassiani
+# - Notebook Author: B. Mary
+# 
+# ### Steps to reproduce
+# - import all libraries
+# - import raw merged data 
+# - create resipy project 3d
+# - import electrode geometry
+# - create thetra mesh
+# - invert
+# - show results 
+
+# In[1]:
+
+
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Dec  6 09:22:55 2021
+
+@author: ben
+"""
+# import resipy and other useful libraries
+# -----------------------------------------------------------------------------
+#get_ipython().run_line_magic('matplotlib', 'inline')
+import warnings
+warnings.filterwarnings('ignore')
+import os
+import sys
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import pyvista as pv
+
+import ipywidgets
+from resipy import Project
+
+#%%
+
+correct_topo = 0
+per_rec = 5 #10
+
+
+
+regMode = 1
+dir_simu = '../INV/timeLapse/TL_June_Laghetti_BackApril' + 'regMode' + str(regMode)
+k = Project(dirname=dir_simu, typ='R3t')
+k.setTitle('Laghetti_TL_June_BackApril')
+
+
+filenames = [
+            '../rawData/Laghetti/April/file120data2.dat',
+            '../rawData/Laghetti/June/file120data1_22giugno2022.dat',
+            '../rawData/Laghetti/June/file120data2_24giugno2022.dat',
+            '../rawData/Laghetti/June/file120data3_27giugno2022.dat',
+            ]
+
+
+
+column_names = ['Spa.1','Spa.2','Spa.3','Spa.4','Vp','In']
+idx = [0,1,2,3,8,9]
+filenames_csv = []
+for f in filenames:
+    numpyfile = np.loadtxt(f, skiprows=1)
+    df=pd.DataFrame(numpyfile[:,idx],columns=column_names)
+    df['dev']=np.zeros(len(df['Spa.1']))
+    df = df.astype({"Spa.1": int}) 
+    df = df.astype({"Spa.2": int}) 
+    df = df.astype({"Spa.3": int}) 
+    df = df.astype({"Spa.4": int}) 
+    filenames_csv.append(f + '.csv')
+    df.to_csv(f + '.csv',sep=',',index=False)
+
+
+# create survey
+# -----------------------------------------------------------------------------
+k.createTimeLapseSurvey(filenames_csv,
+                         ftype='Syscal')
+#k.filterRecip(index=-1, percent=per_rec)
+
+k.filterRecip(index=0, percent=1e99)
+for ii in range(len(filenames_csv)):
+    k.surveys[ii].df = k.surveys[ii].df.drop(k.surveys[ii].df[k.surveys[ii].df.bool_rec == 0].index)
+
+k.filterRecip(index=-1, percent=per_rec) # this is just to apply the change
+indexes = k.matchSurveys()
+
+for ii in range(len(filenames_csv)):
+    k.surveys[ii].df = k.surveys[ii].df.drop(k.surveys[ii].df[indexes[ii]==False].index)
+k.filterRecip(index=-1, percent=per_rec) # this is just to apply the change
+
+
+# create boreholes geometry
+# -----------------------------------------------------------------------------
+nb_elecs_bor = 24
+elecs_spacing = 1
+offset = 1
+asc_bor = np.arange(-nb_elecs_bor*elecs_spacing-offset,0-offset)
+des_bor = np.flip(asc_bor)
+elecs_z = np.hstack([asc_bor,des_bor,des_bor,des_bor,des_bor])
+
+elecs = []
+label = []
+
+# lat/long of the electrodes
+# -----------------------------------------------------------------------------
+pozzi_coords = pd.read_csv('../survey/coordinatepozzilaghetti.txt', header='infer')
+
+# lat/long to absolute positions
+# -----------------------------------------------------------------------------
+pozzi_coords['x'] = pozzi_coords['x'] - min(pozzi_coords['x'])
+pozzi_coords['y'] = pozzi_coords['y'] - min(pozzi_coords['y'])
+pozzi_coords['z'] = pozzi_coords['z'] - max(pozzi_coords['z'])
+
+
+i=1
+for index, row in pozzi_coords.iterrows():
+    for ne in range(len(asc_bor)):
+        elecs.append([row[1],row[2],row[3]])
+        label.append(' '.join([str(i)]))
+        i +=1
+
+# correct for altitude
+# -----------------------------------------------------------------------------
+for ze in enumerate(elecs_z):
+    # print(ze)
+    if correct_topo == 1:
+        elecs[ze[0]][2] +=  ze[1]
+    else:
+        elecs[ze[0]][2] =  ze[1]
+
+elecs = np.vstack(elecs)
+
+if correct_topo == 1:
+    max_elecs = pozzi_coords['z'] - 2
+else:
+    max_elecs= max(elecs[:,2])
+
+# buried flag for upper surface electrode is False!
+# -----------------------------------------------------------------------------
+buried = []
+for e in elecs:
+    if (round(e[2],4) == round(max_elecs, 4)).any():
+        buried.append(False)
+    else:
+        buried.append(True)
+
+
+# electrode positions to dataframe
+# -----------------------------------------------------------------------------
+elecs_df = pd.DataFrame(elecs,columns=['x', 'y', 'z'])
+elecs_df['label'] = label
+elecs_df['buried'] = buried
+
+elecs_df.to_csv('./elecs120data.csv', index=False)
+elecs_df.head()
+
+
+k.setElec(elecs_df)
+k.createMesh(refine=0,cl_factor=5,cl=1) #,fmd=1
+
+
+# k.param['z_min'] = max(elecs_df['z'])
+# k.param['z_max'] = min(elecs_df['z'])
+
+if regMode==1e99:
+    k.param['num_xy_poly'] = 0
+    k.param['z_min'] = -np.inf
+    k.param['z_max'] = np.inf
+
+k.param['data_type'] = 1 # using log of resistitivy
+k.param['a_wgt'] = 0.01
+k.param['b_wgt'] = per_rec/100 #0.05
+k.param['reg_mode'] = regMode
+
+k.invert(parallel=False) # this will do the inversion
+
+
+# save project
+# -----------------------------------------------------------------------------
+k.saveProject('Laghetti_TL_June_BackApril' + 'regMode' + str(regMode) + 'rec' + str(per_rec))
+
+
+k.showResults(attr='Resistivity(log10)', 
+              sens=True, 
+              contour=True, 
+              use_pyvista=True,
+              color_map='jet',zlim=[-30,0],
+              background_color='white')
+
+pl = pv.Plotter()
+k.showResults(attr='Resistivity(ohm.m)',
+              ax=pl, pvslices=([5,15,25],[15],[]), 
+              pvgrid=True, 
+              vmin=0, 
+              vmax=300, 
+              color_map='jet',zlim=[-30,0],
+              background_color='white')
+
+
+pl = pv.Plotter(notebook=False)
+k.showResults(index=1, pvslices=([],[],[-7.5]), 
+              pvgrid=True, attr='difference(percent)', 
+              contour=False, vmin=-25, vmax=0, ax=pl,
+             )
+pl.view_xy()
+pl.show(screenshot='diff_June_T1.png')
+
+pl = pv.Plotter(notebook=False)
+k.showResults(index=2, pvslices=([],[],[-7.5]), 
+              pvgrid=True, attr='difference(percent)', 
+                contour=False, vmin=-25, vmax=0,ax=pl,
+             )
+pl.view_xy()
+pl.show(screenshot='diff_June_T2.png')
+
+pl = pv.Plotter(notebook=False)
+k.showResults(index=3, pvslices=([],[],[-7.5]), 
+              pvgrid=True, attr='difference(percent)', 
+                contour=False, vmin=-25, vmax=0,ax=pl,
+             )
+pl.view_xy()
+pl.show(screenshot='diff_June_T3.png')
+

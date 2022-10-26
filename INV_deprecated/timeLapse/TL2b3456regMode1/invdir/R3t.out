@@ -1,0 +1,211 @@
+
+
+ >> R 3 t     E R T    M o d e l    v 2.31 <<
+
+ >> Date: 04-07-2022
+ >> Salorno_site2                                                                   
+ >> A d v a n c e d   M e s h   I n p u t <<
+ >> T e t r a h e d r a l   E l e m e n t   M e s h <<
+
+
+ >> Parameterisation
+    Total number of parameters:                  53740
+    Number of elements with fixed resistivity:       0
+    Number of parameter regularisation zones:        1
+    Regularisation zone   1   alpha scalar:        1.0
+ >> Reading resistivity model from Start_res.dat                                                                   
+
+ >> L o g - D a t a   I n v e r s i o n <<
+ >> B a c k g r o u n d   R e g u l a r i s a t i o n <<
+    For   1000 measurements the memory needed is:          0.449 Gb
+    For   2000 measurements the memory needed is:          0.879 Gb
+    For   5000 measurements the memory needed is:          2.169 Gb
+    For  10000 measurements the memory needed is:          4.319 Gb
+
+
+ >> Number of measurements read: 3289
+
+ >> Total Memory required is:          1.433 Gb
+
+
+ Processing frame   1 - output to file f001.dat
+
+   Iteration   1
+     Initial RMS Misfit:         2.73      Number of data ignored:    84
+     Alpha:         439.734   RMS Misfit:        2.65  Roughness:        1.043
+     Alpha:         204.107   RMS Misfit:        2.64  Roughness:        1.255
+     Alpha:          94.738   RMS Misfit:        2.58  Roughness:        6.217
+     Alpha:          43.973   RMS Misfit:        2.53  Roughness:       16.298
+     Alpha:          20.411   RMS Misfit:        2.42  Roughness:       53.554
+     Alpha:           9.474   RMS Misfit:        2.30  Roughness:      143.803
+     Alpha:           4.397   RMS Misfit:        2.17  Roughness:      364.970
+     Alpha:           2.041   RMS Misfit:        2.10  Roughness:      804.819
+     Alpha:           0.947   RMS Misfit:        2.09  Roughness:     1599.560
+     Alpha:           0.440   RMS Misfit:        2.20  Roughness:     2974.796
+     Step length set to      1.000
+     Final RMS Misfit:        2.09
+     Data misfit:         13992.53
+     Model misfit:         1515.39
+     Total misfit:        15507.92
+     Updated data weights
+
+   Iteration   2
+     Initial RMS Misfit:         1.08      Number of data ignored:    89
+     Alpha:           0.493   RMS Misfit:        1.05  Roughness:     1131.738
+     Alpha:           0.229   RMS Misfit:        0.96  Roughness:     2220.575
+     Step length set to      1.000
+     Final RMS Misfit:        0.96
+     Data misfit:          2954.94
+     Model misfit:          508.35
+     Total misfit:         3463.29
+     Step length set to      0.126
+     Final RMS Misfit:        1.02
+
+ Solution converged - Outputing results to file
+
+ Calculating sensitivity map
+
+ >> Number of measurements read: 3289
+
+ >> Total Memory required is:          1.433 Gb
+
+
+ Processing frame   2 - output to file f002.dat
+
+   Iteration   1
+     Initial RMS Misfit:         2.84      Number of data ignored:    88
+     Alpha:         439.448   RMS Misfit:        2.77  Roughness:        1.045
+     Alpha:         203.974   RMS Misfit:        2.76  Roughness:        1.261
+     Alpha:          94.676   RMS Misfit:        2.70  Roughness:        6.470
+     Alpha:          43.945   RMS Misfit:        2.64  Roughness:       17.384
+     Alpha:          20.397   RMS Misfit:        2.53  Roughness:       59.154
+     Alpha:           9.468   RMS Misfit:        2.40  Roughness:      161.470
+     Alpha:           4.394   RMS Misfit:        2.25  Roughness:      408.755
+     Alpha:           2.040   RMS Misfit:        2.15  Roughness:      886.353
+     Alpha:           0.947   RMS Misfit:        2.13  Roughness:     1727.329
+     Alpha:           0.439   RMS Misfit:        2.24  Roughness:     3168.590
+     Step length set to      1.000
+     Final RMS Misfit:        2.13
+     Data misfit:         14509.79
+     Model misfit:         1635.37
+     Total misfit:        16145.16
+     Updated data weights
+
+   Iteration   2
+     Initial RMS Misfit:         1.09      Number of data ignored:    90
+     Alpha:           0.494   RMS Misfit:        1.06  Roughness:     1197.464
+     Alpha:           0.229   RMS Misfit:        0.86  Roughness:     2302.473
+     Step length set to      1.000
+     Final RMS Misfit:        0.86
+     Data misfit:          2356.84
+     Model misfit:          527.92
+     Total misfit:         2884.75
+     Step length set to      0.182
+     Final RMS Misfit:        1.00
+
+ Solution converged - Outputing results to file
+
+ Calculating sensitivity map
+
+ >> Number of measurements read: 3289
+
+ >> Total Memory required is:          1.433 Gb
+
+
+ Processing frame   3 - output to file f003.dat
+
+   Iteration   1
+     Initial RMS Misfit:         2.67      Number of data ignored:    88
+     Alpha:         444.116   RMS Misfit:        2.60  Roughness:        0.929
+     Alpha:         206.140   RMS Misfit:        2.59  Roughness:        1.114
+     Alpha:          95.682   RMS Misfit:        2.54  Roughness:        5.727
+     Alpha:          44.412   RMS Misfit:        2.48  Roughness:       15.356
+     Alpha:          20.614   RMS Misfit:        2.38  Roughness:       51.214
+     Alpha:           9.568   RMS Misfit:        2.26  Roughness:      132.479
+     Alpha:           4.441   RMS Misfit:        2.13  Roughness:      312.334
+     Alpha:           2.061   RMS Misfit:        2.03  Roughness:      646.703
+     Alpha:           0.957   RMS Misfit:        1.99  Roughness:     1271.978
+     Alpha:           0.444   RMS Misfit:        2.09  Roughness:     2496.404
+     Step length set to      1.000
+     Final RMS Misfit:        1.99
+     Data misfit:         12690.44
+     Model misfit:         1217.05
+     Total misfit:        13907.49
+     Attempted to update data weights and caused overshoot
+     treating as converged
+
+ Solution converged - Outputing results to file
+
+ Calculating sensitivity map
+
+ >> Number of measurements read: 3289
+
+ >> Total Memory required is:          1.433 Gb
+
+
+ Processing frame   4 - output to file f004.dat
+
+   Iteration   1
+     Initial RMS Misfit:         2.54      Number of data ignored:    84
+     Alpha:         439.467   RMS Misfit:        2.47  Roughness:        0.741
+     Alpha:         203.982   RMS Misfit:        2.47  Roughness:        0.867
+     Alpha:          94.680   RMS Misfit:        2.43  Roughness:        3.852
+     Alpha:          43.947   RMS Misfit:        2.39  Roughness:        9.839
+     Alpha:          20.398   RMS Misfit:        2.33  Roughness:       31.440
+     Alpha:           9.468   RMS Misfit:        2.26  Roughness:       80.567
+     Alpha:           4.395   RMS Misfit:        2.19  Roughness:      198.175
+     Alpha:           2.040   RMS Misfit:        2.13  Roughness:      456.422
+     Alpha:           0.947   RMS Misfit:        2.11  Roughness:     1037.722
+     Alpha:           0.439   RMS Misfit:        2.22  Roughness:     2310.799
+     Step length set to      1.000
+     Final RMS Misfit:        2.11
+     Data misfit:         14268.57
+     Model misfit:          982.52
+     Total misfit:        15251.09
+     Updated data weights
+
+   Iteration   2
+     Initial RMS Misfit:         1.03      Number of data ignored:    83
+     Alpha:           0.481   RMS Misfit:        1.01  Roughness:      609.937
+     Alpha:           0.223   RMS Misfit:        0.91  Roughness:     1345.474
+     Step length set to      1.000
+     Final RMS Misfit:        0.91
+     Data misfit:          2655.44
+     Model misfit:          300.14
+     Total misfit:         2955.57
+     Step length set to      0.069
+     Final RMS Misfit:        1.00
+
+ Solution converged - Outputing results to file
+
+ Calculating sensitivity map
+
+ End of data:  Terminating
+
+
+    Timing Summary
+    ==============
+    Total time taken:                              1418. s
+
+    Percent time taken forming element equations:    0.1 %
+    Percent time taken solving forward  equations:   5.5 %
+    Percent time taken forming Jacobian:             5.0 %
+    Percent time taken solving inverse equations:   89.1 %
+    Percent time taken calculating res. matrix:      0.0 %
+
+    Timing Details
+    ==============
+    Number of calls to form element equations:        56
+    Average time taken in call:                      0.0 s
+    Number of calls to solve forward equations:     6720
+    Average time taken in call:                      0.0 s
+    Number of calls to form Jacobian:                  7
+    Average time taken in call:                     10.1 s
+    Number of calls to solve inverse equations:       46
+    Average time taken in call:                     27.5 s
+    Number of calls to calculate res. matrix:          0
+    Average time taken in call:                      0.0 s
+
+
+ >> Program ended normally
+

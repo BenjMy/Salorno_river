@@ -1,0 +1,175 @@
+
+
+ >> R 3 t     E R T    M o d e l    v 2.31 <<
+
+ >> Date: 26-10-2022
+ >> My beautiful 3D survey                                                          
+ >> A d v a n c e d   M e s h   I n p u t <<
+ >> T e t r a h e d r a l   E l e m e n t   M e s h <<
+
+
+ >> Parameterisation
+    Total number of parameters:                  53740
+    Number of elements with fixed resistivity:       0
+    Number of parameter regularisation zones:        1
+    Regularisation zone   1   alpha scalar:        1.0
+ >> Reading resistivity model from Start_res.dat                                                                   
+
+ >> L o g - D a t a   I n v e r s i o n <<
+ >> B a c k g r o u n d   R e g u l a r i s a t i o n <<
+    For   1000 measurements the memory needed is:          0.449 Gb
+    For   2000 measurements the memory needed is:          0.879 Gb
+    For   5000 measurements the memory needed is:          2.169 Gb
+    For  10000 measurements the memory needed is:          4.319 Gb
+
+
+ >> Number of measurements read: 3250
+
+ >> Total Memory required is:          1.416 Gb
+
+
+ Processing frame   1 - output to file f001.dat
+
+   Iteration   1
+     Initial RMS Misfit:         6.97      Number of data ignored:   151
+     Alpha:        8374.184   RMS Misfit:        6.83  Roughness:        0.315
+     Alpha:        3886.952   RMS Misfit:        6.82  Roughness:        0.369
+     Alpha:        1804.163   RMS Misfit:        6.74  Roughness:        1.335
+     Alpha:         837.418   RMS Misfit:        6.67  Roughness:        3.012
+     Alpha:         388.695   RMS Misfit:        6.55  Roughness:        9.090
+     Alpha:         180.416   RMS Misfit:        6.39  Roughness:       24.822
+     Alpha:          83.742   RMS Misfit:        6.19  Roughness:       68.714
+     Alpha:          38.870   RMS Misfit:        5.97  Roughness:      174.380
+     Alpha:          18.042   RMS Misfit:        5.75  Roughness:      420.666
+     Alpha:           8.374   RMS Misfit:        5.62  Roughness:      965.274
+     Step length set to      1.000
+     Final RMS Misfit:        5.62
+     Data misfit:         97613.45
+     Model misfit:         8083.38
+     Total misfit:       105696.83
+     Updated data weights
+
+   Iteration   2
+     Initial RMS Misfit:         2.49      Number of data ignored:   154
+     Alpha:           5.374   RMS Misfit:        2.22  Roughness:      327.975
+     Alpha:           2.494   RMS Misfit:        2.06  Roughness:      945.153
+     Alpha:           1.158   RMS Misfit:        2.11  Roughness:      818.312
+     Step length set to      1.000
+     Final RMS Misfit:        2.06
+     Data misfit:         13161.35
+     Model misfit:         2357.43
+     Total misfit:        15518.77
+     Updated data weights
+
+   Iteration   3
+     Initial RMS Misfit:         1.20      Number of data ignored:   150
+     Alpha:           1.310   RMS Misfit:        1.16  Roughness:      486.286
+     Alpha:           0.608   RMS Misfit:        1.08  Roughness:     1077.924
+     Alpha:           0.282   RMS Misfit:        1.16  Roughness:     1140.057
+     Step length set to      1.000
+     Final RMS Misfit:        1.08
+     Data misfit:          3637.72
+     Model misfit:          655.52
+     Total misfit:         4293.24
+     Attempted to update data weights and caused overshoot
+     treating as converged
+
+ Solution converged - Outputing results to file
+
+ Calculating sensitivity map
+
+ >> Number of measurements read: 3117
+
+ >> Total Memory required is:          1.359 Gb
+
+
+ Processing frame   2 - output to file f002.dat
+
+   Iteration   1
+     Initial RMS Misfit:         5.88      Number of data ignored:   132
+     Alpha:        1890.110   RMS Misfit:        5.75  Roughness:        1.008
+     Alpha:         877.311   RMS Misfit:        5.74  Roughness:        1.217
+     Alpha:         407.212   RMS Misfit:        5.64  Roughness:        5.316
+     Alpha:         189.011   RMS Misfit:        5.55  Roughness:       12.932
+     Alpha:          87.731   RMS Misfit:        5.40  Roughness:       39.569
+     Alpha:          40.721   RMS Misfit:        5.24  Roughness:      102.326
+     Alpha:          18.901   RMS Misfit:        5.07  Roughness:      262.566
+     Alpha:           8.773   RMS Misfit:        5.16  Roughness:      628.616
+     Step length set to      1.000
+     Final RMS Misfit:        5.07
+     Data misfit:         76766.96
+     Model misfit:         4962.79
+     Total misfit:        81729.76
+     Updated data weights
+
+   Iteration   2
+     Initial RMS Misfit:         2.25      Number of data ignored:   129
+     Alpha:          12.042   RMS Misfit:        2.10  Roughness:      119.594
+     Alpha:           5.589   RMS Misfit:        2.02  Roughness:      314.111
+     Alpha:           2.594   RMS Misfit:        2.00  Roughness:      314.879
+     Alpha:           1.204   RMS Misfit:        1.96  Roughness:      661.087
+     Alpha:           0.559   RMS Misfit:        2.03  Roughness:     1086.377
+     Step length set to      1.000
+     Final RMS Misfit:        1.96
+     Data misfit:         11496.79
+     Model misfit:          796.05
+     Total misfit:        12292.85
+     Updated data weights
+
+   Iteration   3
+     Initial RMS Misfit:         1.17      Number of data ignored:   125
+     Alpha:           0.630   RMS Misfit:        1.07  Roughness:      623.978
+     Alpha:           0.293   RMS Misfit:        1.05  Roughness:     1109.338
+     Alpha:           0.136   RMS Misfit:        1.19  Roughness:     1654.439
+     Step length set to      1.000
+     Final RMS Misfit:        1.05
+     Data misfit:          3301.07
+     Model misfit:          324.54
+     Total misfit:         3625.61
+     Attempted to update data weights and caused overshoot
+     treating as converged
+
+ Solution converged - Outputing results to file
+
+ Calculating sensitivity map
+
+ >> Number of measurements read: 3243
+
+ >> Total Memory required is:          1.413 Gb
+
+
+ Processing frame   3 - output to file f003.dat
+
+   Iteration   1
+     Initial RMS Misfit:         6.16      Number of data ignored:   129
+     Alpha:        5794.810   RMS Misfit:        6.04  Roughness:        0.380
+     Alpha:        2689.713   RMS Misfit:        6.03  Roughness:        0.447
+     Alpha:        1248.454   RMS Misfit:        5.96  Roughness:        1.560
+     Alpha:         579.481   RMS Misfit:        5.89  Roughness:        3.451
+     Alpha:         268.971   RMS Misfit:        5.79  Roughness:        9.980
+     Alpha:         124.845   RMS Misfit:        5.67  Roughness:       26.008
+     Alpha:          57.948   RMS Misfit:        5.54  Roughness:       70.299
+     Alpha:          26.897   RMS Misfit:        5.36  Roughness:      183.903
+     Alpha:          12.485   RMS Misfit:        5.32  Roughness:      471.379
+     Alpha:           5.795   RMS Misfit:        5.18  Roughness:     1128.437
+     Step length set to      1.000
+     Final RMS Misfit:        5.18
+     Data misfit:         82813.84
+     Model misfit:         6539.08
+     Total misfit:        89352.92
+     Updated data weights
+
+   Iteration   2
+     Initial RMS Misfit:         2.45      Number of data ignored:   142
+     Alpha:           3.763   RMS Misfit:        2.21  Roughness:      328.745
+     Alpha:           1.747   RMS Misfit:        2.03  Roughness:     1168.750
+     Alpha:           0.811   RMS Misfit:        2.09  Roughness:     1169.731
+     Step length set to      1.000
+     Final RMS Misfit:        2.03
+     Data misfit:         12775.33
+     Model misfit:         2041.43
+     Total misfit:        14816.77
+     Updated data weights
+
+   Iteration   3
+     Initial RMS Misfit:         1.34      Number of data ignored:   128

@@ -1,0 +1,70 @@
+
+
+ >> R 3 t     E R T    M o d e l    v 2.31 <<
+
+ >> Date: 26-10-2022
+ >> Laghetti_June                                                                   
+ >> A d v a n c e d   M e s h   I n p u t <<
+ >> T e t r a h e d r a l   E l e m e n t   M e s h <<
+
+
+ >> Parameterisation
+    Total number of parameters:                  53740
+    Number of elements with fixed resistivity:       0
+    Number of parameter regularisation zones:        1
+    Regularisation zone   1   alpha scalar:        1.0
+ >> Reading resistivity model from res0.dat                                                                        
+
+ >> L o g - D a t a   I n v e r s i o n <<
+ >> B a c k g r o u n d   R e g u l a r i s a t i o n <<
+    For   1000 measurements the memory needed is:          0.449 Gb
+    For   2000 measurements the memory needed is:          0.879 Gb
+    For   5000 measurements the memory needed is:          2.169 Gb
+    For  10000 measurements the memory needed is:          4.319 Gb
+
+ WARNING:  Rejecting reading  251
+ WARNING:  Rejecting reading 7405
+ WARNING:  Rejecting reading 8403
+ WARNING:  Rejecting reading 8871
+
+ >> Number of measurements read: 9936
+
+ >> Total Memory required is:          4.292 Gb
+
+
+ Processing frame   1 - output to file f001.dat
+
+   Iteration   1
+     Initial RMS Misfit:         8.22      Number of data ignored:  1523
+     Alpha:       91299.503   RMS Misfit:        8.15  Roughness:        0.031
+     Alpha:       42377.476   RMS Misfit:        8.15  Roughness:        0.035
+     Alpha:       19669.882   RMS Misfit:        8.14  Roughness:        0.099
+     Alpha:        9129.950   RMS Misfit:        8.12  Roughness:        0.205
+     Alpha:        4237.748   RMS Misfit:        8.10  Roughness:        0.592
+     Alpha:        1966.988   RMS Misfit:        8.07  Roughness:        1.790
+     Alpha:         912.995   RMS Misfit:        8.02  Roughness:        6.474
+     Alpha:         423.775   RMS Misfit:        7.92  Roughness:       24.052
+     Alpha:         196.699   RMS Misfit:        7.73  Roughness:       89.298
+     Alpha:          91.300   RMS Misfit:        7.45  Roughness:      304.256
+     Step length set to      1.000
+     Final RMS Misfit:        7.45
+     Data misfit:        461678.14
+     Model misfit:        27778.44
+     Total misfit:       489456.58
+     Updated data weights
+
+   Iteration   2
+     Initial RMS Misfit:         4.62      Number of data ignored:  1575
+     Alpha:          67.120   RMS Misfit:        4.46  Roughness:      253.337
+     Alpha:          31.154   RMS Misfit:        4.18  Roughness:      769.602
+     Alpha:          14.460   RMS Misfit:        3.98  Roughness:     1290.549
+     Alpha:           6.712   RMS Misfit:        3.70  Roughness:     2897.342
+     Alpha:           3.115   RMS Misfit:        3.39  Roughness:     5244.833
+     Alpha:           1.446   RMS Misfit:        3.34  Roughness:     9349.674
+     Alpha:           0.671   RMS Misfit:        3.37  Roughness:    15260.074
+     Step length set to      1.000
+     Final RMS Misfit:        3.34
+     Data misfit:         91962.27
+     Model misfit:        13520.09
+     Total misfit:       105482.36
+     Updated data weights
